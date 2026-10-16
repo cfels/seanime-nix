@@ -11,7 +11,7 @@ in
     }:
     {
       packages = {
-        ${pname} = pkgs.callPackage ./${pname}.nix { };
+        ${pname} = pkgs.callPackage ./unwrapped.nix { };
         default = config.packages.${pname};
       };
     };
